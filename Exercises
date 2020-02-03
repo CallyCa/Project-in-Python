@@ -1,1 +1,284 @@
+"""EX - 1
+nt = []
+soma = 0
+for i in range(1,5):
+    nota = float(input("nota %i = " %i))
+    nt.append(nota)
+    soma+= nota
 
+for i in range(4):
+    print("Nota %i: %i" % (i+1,nt[i]))
+print("A media é = ", (soma/4))"""
+
+"""EX2- 
+par = []
+impar = []
+num = []
+for i in range(1,6):
+    nume = int(input("numero %i: " %i))
+    num.append(nume)
+
+    if(nume % 2 == 0):
+        par.append(nume)
+    else:
+        impar.append(nume)
+
+print("numeros: ",num)
+print("Pares = ", par)
+print("Impar = ", impar)"""
+
+"""EX3 - import random
+vetor = []
+n = int(input("Numero de lancamento de dados: "))
+for i in range(n):
+    vetor.append(random.randint(1,6))
+for i in range(1,7):
+    print("A face %i apareceu %.2f vezes." %(i, 100 * vetor.count(i) / n))"""
+
+""" EX4 - vetor = []
+num = int(input("Digite um numero da sequencia: "))
+while(num != -1):
+    vetor.append(num)
+    num = int(input("Digite um numero da sequencia: "))
+element = int(input("Numero a ser procurado: "))
+
+cont = 0
+for i in range(len(vetor)):
+    if(vetor[i] == element):
+        cont += 1
+
+print("O elemento %i apareceu %i vezes na sequencia." % (element, cont))
+
+print("O elemento %i apareceu %i vezes na sequencia." % (element,vetor.count(element)))"""""
+
+"""EX5- vetor = []
+num = int(input("Numero do jogador (0=fim): "))
+
+while(num != 0):
+    if(1 <= num <= 23):
+        num = int(input("Numero do jogador (0=fim): "))
+    vetor.append(num)
+print("Foram computados %i votos." % (len(vetor)))
+
+melhor = 1
+maior_voto = 0
+porc = 0
+for i in range(1,24):
+    total = vetor.count(i)
+    porce = 100 * total / len(vetor)
+    if(total > 0):
+        print("jogador %4.i            %4.i vezes          %.1f porcentagem" % (i,total,porce))
+        if(total > maior_voto):
+            maior_voto = total
+            melhor = i
+            porc = porce
+print("O melhor jogador foi o numero %i, com %i votos, correspondendo a %.1f%% do total de votos." % (melhor,maior_voto,porc))"""
+
+"""EX6 - alunos = 10
+medias = []
+for i in range(1,alunos +1):
+    notas = 0
+    for j in range(1,5):
+        notas += float(input("Digite a nota %i de 4 do aluno %i de %i: " % (j,i,alunos)))
+    notas /= 4
+    medias.append(notas)
+num = 0
+for media in medias:
+    if(media > 7.0):
+        num+=1
+print("O numero de alunos com media maior que 7.0 é",num)"""
+
+"""EX7 - lista = []
+num = int(input("Numero da lista: "))
+while(num != -1):
+    lista.append(num)
+    num = int(input("Numero da lista: "))
+
+print("Os seguintes numeros da lista sao maiores do que 10: ")
+for i in lista:
+    if(i > 10):
+        print(i)"""
+
+"""EX8 - lista = []
+num = int(input("Numero da sequencia: "))
+while(num != -1):
+    lista.append(num)
+    num = int(input("Numero da sequencia: "))
+print("Numeros pares da sequencia: ")
+for i in lista:
+    if(i % 2 == 0):
+        print(i)"""
+
+"""EX9 - lista = []
+num = int(input("Numero de elementos: "))
+aux = []
+for i in range(num):
+    num = int(input("Numero: "))
+    lista.append(num)
+    aux.append(num)
+
+print(lista)
+
+for ele in aux:
+    aparicoes = lista.count(ele)
+    for i in range(aparicoes-1):
+        lista.remove(ele)
+print(lista)"""
+
+"""EX10 - import random
+
+player_vida = 150
+player_mana = 100
+inimigo_vida = 50
+n = int(input("Numero de inimigos: "))
+inimigos = []
+for i in range(n):
+    inimigos.append([i+1,inimigo_vida])
+jogando = True
+while(jogando):
+    print("Vida:",player_vida)
+    print("Mana:",player_mana)
+    atk = int(input("Atacar(1) ou Curar(2): "))
+    if(atk == 1):
+        selecionado = random.choice(inimigos)
+        dano = random.randint(10,15)
+        print("Voce causou %i de dano ao inimigo %i" % (dano,selecionado[0]))
+        selecionado[1] -= dano
+
+        if(selecionado[1] <= 0):
+            print("Inimigo %i morreu!" % (selecionado[0]))
+            inimigos.remove(selecionado)
+        else:
+            if(player_mana >= 10):
+                cura = random.randint(10,15)
+                print("Voce recebeu %i de vida!" % (cura))
+                player_vida += cura
+                player_mana -= 10
+            else:
+                print("Mana insuficiente!")
+
+        for inimigo in inimigos:
+            acertou = bool(random.choice[1,1,1,0])
+            if(acertou):
+                dano = random.randint(1,3)
+                print("Inimigo %i causou %i de dano!" % (inimigo[0],dano))
+                player_vida -= dano
+            else:
+                print("Inimigo %i errou o ataque!" % (inimigo[0]))
+        if(player_mana < 100):
+            player_mana += 3
+        if(player_mana > 100):
+            player_mana = 100
+        if(player_vida <= 0):
+            print("Voce morreu!")
+            jogando = False
+        if(len(inimigos) == 0):
+            print("Ganhou!")
+            jogando = False"""
+
+"""EX11 - lista = []
+lista_invertida = []
+soma = 0
+num = int(input("Numero: "))
+
+while (num != -1):
+    soma += num
+    lista.append(num)
+    lista_invertida.append(num)
+    num = int(input("Numero: "))
+
+media = (soma / len(lista))
+lista_invertida.reverse()
+
+print("Lista = ", lista)
+print("Foram lidos %i numeros" % (len(lista)))
+print("Lista invertida = ", lista_invertida)
+print("Soma dos valores = ", soma)
+print("Media dos valores = ", media)
+
+qnt = 0
+qnt7 = 0
+aux = []
+abai = []
+
+for i in lista:
+    if (i > media):
+        qnt += 1
+        aux.append(i)
+    if (i < 7):
+        qnt7 += 1
+        abai.append(i)
+        
+print("Quantidade de valores acima da media = ", qnt)
+print("Lista maior que media = ", aux)
+print("Valores abaixo de 7 = ", qnt7)
+print("Lista dos 7 = ", abai)
+"""
+
+
+"""EX 12 - def multi(nums):
+    multi_num = 1
+    for i in nums:
+        multi_num *= i
+    return multi_num
+num3 = []
+num2 = 1
+while(num2 != 0):
+    num2 = int(input("numero: "))
+    if(num2 != 0):
+        num3.append(num2)
+    print(multi(num3))"""
+
+"""EX13 -import random
+
+def maior(num):
+    maior_num = 0
+    for i in num:
+        if i > maior_num:
+            maior_num = i
+    return maior_num
+
+num2 = []
+num1 = 1
+
+while num1 != 0:
+    num1 = random.randrange(0,61)
+    num2.append(num1)
+print(maior(num2))"""
+
+
+"""EX 14 - def somaImposto(taxaImposto,custo):
+    return custo * (1 + taxaImposto / 100)
+
+custo_normal = float(input("Custo: "))
+taxa = float(input("Taxa do imposto: "))
+print("O custo recalculado com o imposto é de R$ %.2f" % (somaImposto(taxa,custo_normal)))"""
+
+"""EX 15 - def ConverterHora(hora):
+    return hora - 12
+def imprimeHora(hora,minuto):
+    if(hora <= 12):
+        print("%i:%i A.M" %(hora,minuto))
+    else:
+        hora = ConverterHora(hora)
+        print("%i:%i P.M" % (hora,minuto))
+rodando = True
+while(rodando):
+    hora = int(input("Digite a hora: "))
+    minuto = int(input("Digite o minuto: "))
+    imprimeHora(hora,minuto)
+    rodando = bool(int(input("Deseja fazer uma nova conversao? (1 - Sim; 0 - Nao): ")))"""
+
+"""def somar(m1, m2):
+    matriz_soma = []
+    # Supondo que as duas matrizes possuem o mesmo tamanho
+    quant_linhas = len(m1) # Conta quantas linhas existem
+    quant_colunas = len(m1[0]) # Conta quantos elementos têm em uma linha
+    for i in range(quant_linhas):
+        # Cria uma nova linha na matriz_soma
+        matriz_soma.append([])
+        for j in range(quant_colunas):
+            # Somando os elementos que possuem o mesmo índice
+            soma = m1[i][j] + m2[i][j]
+            matriz_soma[i].append(soma)
+    return matriz_soma"""
