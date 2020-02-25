@@ -282,3 +282,173 @@ while(rodando):
             soma = m1[i][j] + m2[i][j]
             matriz_soma[i].append(soma)
     return matriz_soma"""
+
+"""EX16 - dia = input("informe o dia da semana: ")
+if(dia == 'domingo' or dia == 'sabado'):
+    print("Hoje eh dia de descanso.")
+else:
+    print("Voce precisa trabalhar!")"""
+
+"""EX17 - frutas = ['Mamao','Abacaxi','Papaia','Morango','Laranja']
+for i in frutas:
+    if(i == 'Morango'):
+        print("Faz parte da lista", len(frutas))
+        break
+    else:
+        pass
+        print("Nao faz parte")"""
+
+"""EX18 - par = []
+for i in range(100,151):
+    if(i % 2 == 0):
+        par.append(i)
+print("Lista de numeros pares\n", par)"""
+
+"""EX18 - count = 100
+while(count <= 150):
+    if(count % 2 == 0):
+        print("PAR: ", count)
+    count +=1"""
+
+"""EX19- count = 0
+while(count < 100):
+    print(count)
+    count+=1
+    if(count == 23):
+        print(count)
+        break"""
+"""EX20 - list = []
+a = 4
+
+while(a <= 20):
+    if(a % 2 == 0):
+        list.append(a)
+    a+=1
+print(list)"""
+
+"""frase = "É melhor, muito melhor, contentar-se com a realidade; se ela não é tão brilhante como os sonhos, tem pelo menos a vantagem de existir."
+count = 0
+for i in frase:
+    if(i == 'r'):
+        count+= 1
+print("O r aparece %d vezes na frase acima" % count)"""
+
+
+"""EX 21 - def primeiraFunc(nome):
+    print("Hello %s" % nome)
+primeiraFunc("Cally")"""
+
+"""EX 22 - def funcLeitura(a,b):
+        soma = a + b
+        print("Soma da funcao:", soma)
+        return soma
+
+x = int(input("numero: "))
+c = int(input("numero: "))
+somar = funcLeitura(x,c)"""
+
+"""EX 23 - def enesi(x):
+    for i in range(x):
+        i+=1
+        print(str(i) * i)
+
+a = int(input("numero: "))
+ret = enesi(a)"""
+
+""" EX 24 -def enesi(n):
+    for i in range(1,n+1):
+        for j in range(i):
+            print(str(j))
+        print()
+a = int(input("numero: "))
+ret = enesi(a)"""
+
+"""EX 25 - def somar(a,b,c):
+    soma = a+b+c
+    print(soma)
+    return soma
+
+x = int(input("numero: "))
+d = int(input("numero: "))
+v = int(input("numero: "))
+med = somar(x,d,v)
+"""
+
+"""EX 26 - def notas(x):
+    while(x < 0 or x > 10):
+        print("Digite uma nota valida")
+        break
+    else:
+        print("Valor aceito: ",x)
+
+nota = int(input("nota: "))
+som = notas(nota)"""
+
+"""EX 27 - def senha(user,passwd):
+    i = 0
+    while(user == passwd and i <= 3):
+        print("Usuario ou senha incorretos")
+        i+=1
+        break
+    else:
+        print("Permissao concedida")
+
+usu = input("usuario: ")
+sen = input("senha: ")
+per = senha(usu,sen)"""
+
+
+"""EX 28 - def impares(a):
+    if(a % 2 != 0):
+        print("Impar: ",a)
+
+i = 0
+while(i < 50):
+    i+=1
+    impar = impares(i)"""
+
+"""EX 29 - def tabuada(a):
+    for i in range(11):
+        mult = a * i
+        print("%d X %d = %d" % (a, i, mult))
+
+x = int(input("numero: "))
+ade = tabuada(x)"""
+
+
+"""EX 30 - def calculadora(a):
+    print("Selecione a opcao abaixo\n")
+    print(" 1 - Soma:\n 2 - Subtracao:\n 3 - Multiplicacao:\n 4 - Divisao:")
+    item = int(input("Informe a opcao: "))
+    if(item == 1):
+        for i in range(11):
+            soma = a + i
+            print("A soma de %d + %d = %d" % (a,i,soma))
+    elif(item == 2):
+        for i in range(0,11, 1):
+            subtracao = (a - i)
+            while(subtracao < 0):
+                subtracao *= -1
+                print("A subtracao de %d - %d = %d" %(a,i,subtracao))
+    elif(item == 3):
+        for i in range(11):
+            multi = a * i
+            print("A multiplicacao de %d X %d = %d" % (a,i,multi))
+    elif(item == 4):
+        for i in range(1,11):
+            divisao = a / i
+            print("A divisao de %d / %d = %d" % (a,i,divisao))
+    return calculadora
+
+num = int(input("numero: "))
+calc = calculadora(num)"""
+
+"""EX 31 - filename = input("informe o nome do arquivo: ")
+filename = filename + ".txt"
+arq2 = open(filename, "a")
+esc = input("Digite algo para o texto: ")
+arq2.write(esc)
+arq2.close()
+arq2 = open(filename,"r")
+print(arq2.read())
+arq2.close()"""
